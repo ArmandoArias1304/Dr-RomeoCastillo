@@ -1,0 +1,1405 @@
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cirugía Estética Dr. Romeo Castillo Pérez — Tu Nueva Versión</title>
+    <meta
+      name="description"
+      content="Clínica de cirugía estética de élite. Dr. Romeo Castillo Pérez, especialista certificado. Resultados naturales, atención personalizada."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                300: "#f5d87a",
+                400: "#f5c842",
+                500: "#D4AF37",
+                600: "#c9a227",
+                700: "#a07d1a",
+              },
+              carbon: {
+                50: "#f5f5f5",
+                100: "#e8e8e8",
+                200: "#d0d0d0",
+                300: "#b0b0b0",
+                400: "#888888",
+                500: "#666666",
+                600: "#444444",
+                700: "#2a2a2a",
+                800: "#1a1a1a",
+                900: "#0d0d0d",
+              },
+            },
+            fontFamily: {
+              display: ['"Bebas Neue"', "sans-serif"],
+              body: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="icon" type="image/png" href="images/logo.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-white dark:bg-carbon-900 font-body overflow-x-hidden">
+    <!-- SPLASH -->
+    <div
+      id="splash"
+      class="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
+    >
+      <div id="splash-text" class="text-center select-none">
+        <h1
+          class="shimmer-text font-display text-6xl sm:text-8xl md:text-[7rem] lg:text-[9rem] tracking-[0.12em] leading-tight"
+        >
+          DR. ROMEO<br />CASTILLO PÉREZ
+        </h1>
+        <p
+          class="splash-tagline text-gold-500 text-xs sm:text-sm tracking-[0.55em] mt-5 font-light uppercase"
+        >
+          Tu nueva versión comienza aquí
+        </p>
+      </div>
+      <div
+        id="splash-logo"
+        class="absolute inset-0 flex items-center justify-center pointer-events-none"
+        style="opacity: 0"
+      >
+        <div
+          class="w-72 h-72 flex items-center justify-center bg-transparent relative"
+        >
+          <div style="position:absolute; inset:0; z-index:0; border-radius:32px; box-shadow:0 0 80px 32px #d4af37cc, 0 0 0 0 #d4af37; background:transparent;"></div>
+          <img
+            src="images/nabvard.png"
+            alt="Logo Dr. Romeo Castillo Pérez"
+            class="w-60 h-60 object-cover shadow-2xl relative"
+            style="border: none; background: none; border-radius: 0; box-shadow: none; padding: 0; z-index:1;"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+      <div class="navbar-glass px-4 sm:px-6 lg:px-10">
+        <div class="flex items-center justify-between h-[68px] sm:h-20">
+          <a
+            id="nav-logo"
+            href="#hero"
+            class="flex items-center gap-3 opacity-0 pointer-events-none transition-opacity duration-500"
+          >
+            <div
+              class="w-12 h-12 rounded-full border-2 border-gold-500 flex items-center justify-center bg-carbon-900 flex-shrink-0"
+            >
+              <img
+                src="images/nabvard.png"
+                alt="Logo Dr. Romeo Castillo"
+                class="w-10 h-10 object-cover rounded-full shadow-md"
+                style="background: white; border: 2px solid #d4af37; box-shadow: 0 0 12px #d4af3799; padding: 0;"
+              />
+            </div>
+            <div class="flex flex-col items-center justify-center ml-3">
+              <span class="font-display text-2xl sm:text-3xl tracking-[0.18em] leading-none">
+                <span class="text-gold-500 animate-gold-glow" style="animation: goldGlow 2.2s ease-in-out infinite alternate;">DR. ROMEO</span>
+                <span class="hidden dark:inline text-white">CASTILLO PÉREZ</span>
+                <span class="inline dark:hidden text-carbon-900">CASTILLO PÉREZ</span>
+              </span>
+            </div>
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#servicios" class="nav-link">Servicios</a>
+            <a href="#historia" class="nav-link">Historia</a>
+            <a href="#entrenadores" class="nav-link">Equipo</a>
+            <a href="#horarios" class="nav-link">Horarios</a>
+            <a href="#planes" class="nav-link">Planes</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+          </div>
+          <div class="flex items-center gap-3">
+            <button
+              id="theme-toggle"
+              class="theme-btn"
+              aria-label="Cambiar tema"
+            >
+              <svg
+                id="sun-icon"
+                class="w-5 h-5 hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <svg
+                id="moon-icon"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                />
+              </svg>
+            </button>
+            <a
+              href="#planes"
+              class="hidden md:inline-flex btn-gold text-xs px-5 py-2.5"
+              >Agendar consulta</a
+            >
+            <button
+              id="hamburger"
+              class="md:hidden p-2"
+              aria-label="Abrir menú"
+            >
+              <div class="hamburger-icon">
+                <span></span><span></span><span></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-40 mobile-overlay hidden"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="flex flex-col items-center justify-center h-full gap-7">
+        <a href="#servicios" class="mobile-nav-link" data-close>Servicios</a>
+        <a href="#historia" class="mobile-nav-link" data-close>Historia</a>
+        <a href="#entrenadores" class="mobile-nav-link" data-close>Equipo</a>
+        <a href="#horarios" class="mobile-nav-link" data-close>Horarios</a>
+        <a href="#planes" class="mobile-nav-link" data-close>Planes</a>
+        <a href="#contacto" class="mobile-nav-link" data-close>Contacto</a>
+        <a href="#planes" class="btn-gold mt-6 px-8 py-3 text-sm" data-close
+          >Agendar consulta</a
+        >
+      </div>
+    </div>
+
+    <main>
+      <!-- ── HERO ── -->
+      <section
+        id="hero"
+        class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      >
+        <div id="hero-bg" class="hero-bg absolute inset-0"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-carbon-900/95 dark:to-carbon-900"
+        ></div>
+        <div
+          class="absolute inset-0 hero-grid pointer-events-none opacity-[0.07]"
+        ></div>
+        <div
+          class="relative z-10 text-center px-4 max-w-5xl mx-auto pt-24 sm:pt-20 pb-36 sm:pb-44 hero-section-content"
+        >
+          <div class="reveal-el">
+            <p
+              class="text-gold-400 text-[0.65rem] sm:text-xs tracking-[0.5em] uppercase mb-5 font-semibold hero-shadow-text"
+            >
+              <span id="hero-location"> &nbsp;Cirugía Estética Certificada — Villahermosa, Tabasco &nbsp;</span>
+            </p>
+            <h2
+              class="font-display text-[4.5rem] sm:text-8xl md:text-[9rem] lg:text-[11rem] leading-[0.9] text-white tracking-wider mb-8 hero-shadow-text"
+            >
+              <span id="hero-title-scramble">DR. ROMEO<br /><span class="text-gold-500 hero-shadow-text">CASTILLO</span></span>
+            </h2>
+            <p
+              class="text-carbon-200 text-sm sm:text-lg max-w-xl mx-auto mb-10 font-light leading-relaxed hero-shadow-text"
+            >
+              No es solo una clínica — es donde la confianza se renueva.<br class="hidden sm:block" />
+              Cirugía estética de élite, resultados naturales y duraderos.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+              <a
+                href="#planes"
+                class="btn-gold text-xs sm:text-sm px-8 py-4 w-full sm:w-auto"
+                >Agendar consulta</a
+              >
+              <a
+                href="#historia"
+                class="btn-outline text-xs sm:text-sm px-8 py-4 w-full sm:w-auto"
+                >Conocer más</a
+              >
+            </div>
+          </div>
+          <!-- Imagen flotante lado derecho -->
+          
+        </div>
+        <div
+          class="absolute bottom-28 sm:bottom-24 left-1/2 -translate-x-1/2 animate-bounce z-10"
+        >
+          <div
+            class="w-6 h-10 border-2 border-gold-500/50 rounded-full flex justify-center pt-1.5"
+          >
+            <div class="w-1 h-2.5 bg-gold-500 rounded-full"></div>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 stats-bar z-10">
+          <div
+            class="max-w-4xl mx-auto px-4 py-6 grid grid-cols-3 gap-2 text-center"
+          >
+            <div class="reveal-el">
+              <p class="font-display text-3xl sm:text-4xl text-gold-500">
+                1,200+
+              </p>
+              <p
+                class="text-carbon-300 text-[0.6rem] sm:text-xs tracking-widest uppercase mt-1 font-medium"
+              >
+                Pacientes satisfechos
+              </p>
+            </div>
+            <div class="reveal-el">
+              <p class="font-display text-3xl sm:text-4xl text-gold-500">8+</p>
+              <p
+                class="text-carbon-300 text-[0.6rem] sm:text-xs tracking-widest uppercase mt-1 font-medium"
+              >
+                Especialistas
+              </p>
+            </div>
+            <div class="reveal-el">
+              <p class="font-display text-3xl sm:text-4xl text-gold-500">12</p>
+              <p
+                class="text-carbon-300 text-[0.6rem] sm:text-xs tracking-widest uppercase mt-1 font-medium"
+              >
+                Años de exp.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-float-img-wrapper hero-float-img-left">
+    <img src="images/persona.png" alt="Dr. Romeo Castillo Pérez" class="hero-float-img" />
+  </div>
+        <div class="hero-float-img-wrapper">
+            <img src="images/nabvard.png" alt="Dr. Romeo Castillo Pérez" class="hero-float-img" />
+          </div>
+      </section>
+      
+
+      <!-- MANTRA -->
+<section id="mantra" class="mantra-section">
+  <div class="mantra-before"></div>
+  <div class="mantra-scroll-zone">
+    <div class="mantra-sticky">
+      <div class="mantra-inner">
+        <p class="mantra-label">FILOSOFÍA</p>
+        <div class="mantra-phrases">
+
+          <div class="mantra-phrase" data-index="0">
+            <span class="mp-word" data-wi="0">Cada</span>
+            <span class="mp-word" data-wi="1">detalle</span>
+            <span class="mp-word" data-wi="2">que</span>
+            <span class="mp-word" data-wi="3">refinamos</span>
+            <span class="mp-word" data-wi="4">revela</span>
+            <span class="mp-word" data-wi="5">una</span>
+            <span class="mp-word" data-wi="6">versión</span>
+            <span class="mp-word mp-accent" data-wi="7">más</span>
+            <span class="mp-word mp-accent" data-wi="8">auténtica</span>
+            <span class="mp-word mp-accent" data-wi="9">de</span>
+            <span class="mp-word mp-accent" data-wi="10">ti.</span>
+          </div>
+
+          <div class="mantra-phrase" data-index="1">
+            <span class="mp-word" data-wi="0">La</span>
+            <span class="mp-word" data-wi="1">belleza</span>
+            <span class="mp-word" data-wi="2">de</span>
+            <span class="mp-word" data-wi="3">hoy</span>
+            <span class="mp-word" data-wi="4">es</span>
+            <span class="mp-word" data-wi="5">la</span>
+            <span class="mp-word mp-accent" data-wi="6">confianza</span>
+            <span class="mp-word mp-accent" data-wi="7">de</span>
+            <span class="mp-word mp-accent" data-wi="8">mañana.</span>
+          </div>
+
+          <div class="mantra-phrase" data-index="2">
+            <span class="mp-word" data-wi="0">No</span>
+            <span class="mp-word" data-wi="1">cambies</span>
+            <span class="mp-word" data-wi="2">para</span>
+            <span class="mp-word mp-accent" data-wi="3">otros.</span>
+            <span class="mp-word mp-accent" data-wi="4">Transfórmate</span>
+          </div>
+
+          <div class="mantra-phrase" data-index="3">
+            <span class="mp-word" data-wi="0">para</span>
+            <span class="mp-word" data-wi="1">sentirte</span>
+            <span class="mp-word" data-wi="2">tú</span>
+            <span class="mp-word mp-gold" data-wi="3">invencible.</span>
+          </div>
+
+        </div>
+
+        <div class="mantra-progress-track">
+          <div id="mantra-progress" class="mantra-progress-fill"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="mantra-after"></div>
+</section>
+
+            <!-- Progress bar -->
+            <div class="mantra-progress-track">
+              <div id="mantra-progress" class="mantra-progress-fill"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section id="servicios" class="svc-section">
+  <div class="svc-inner">
+
+    <div class="svc-header reveal-el">
+      <p class="svc-label">Lo que ofrecemos</p>
+      <h3 class="svc-title">NUESTROS <span>PROCEDIMIENTOS</span></h3>
+    </div>
+
+    <div class="svc-carousel-wrap">
+      <div class="svc-track" id="svcTrack">
+
+        <!-- ── LOTE 1 ── -->
+        <div class="svc-slide">
+
+          <div class="svc-card">
+            <div class="svc-card-bg" style="background-image:url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=80')"></div>
+            <div class="svc-card-veil"></div>
+            <div class="svc-card-body">
+              <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+              </div>
+              <h4 class="svc-card-title">RINOPLASTIA</h4>
+              <div class="svc-line"></div>
+              <p class="svc-card-text">Remodelación estética y funcional de la nariz con técnicas de precisión para resultados armónicos y naturales.</p>
+            </div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-card-bg" style="background-image:url('https://www.doctorplasticsurgery.com/wp-content/uploads/2026/01/Prostock-studio-2-1568x961.jpg')"></div>
+            <div class="svc-card-veil"></div>
+            <div class="svc-card-body">
+              <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/></svg>
+              </div>
+              <h4 class="svc-card-title">LIPOSUCCIÓN</h4>
+              <div class="svc-line"></div>
+              <p class="svc-card-text">Eliminación selectiva de grasa localizada con tecnología avanzada para esculpir tu figura de forma segura y efectiva.</p>
+            </div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-card-bg" style="background-image:url('https://cirugiaplastica.mx/content/4-pacientes/1-procedimientos/1-estetica/5-mamoplastia-de-aumento/fondo.jpg')"></div>
+            <div class="svc-card-veil"></div>
+            <div class="svc-card-body">
+              <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+              </div>
+              <h4 class="svc-card-title">MAMOPLASTIA</h4>
+              <div class="svc-line"></div>
+              <p class="svc-card-text">Aumento, reducción o elevación de busto con implantes o técnicas propias para lograr proporciones naturales y armoniosas.</p>
+            </div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-card-bg" style="background-image:url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=900&q=80')"></div>
+            <div class="svc-card-veil"></div>
+            <div class="svc-card-body">
+              <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 003.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+              </div>
+              <h4 class="svc-card-title">BICHECTOMÍA</h4>
+              <div class="svc-line"></div>
+              <p class="svc-card-text">Extracción de las bolsas de Bichat para definir los pómulos y afinar el rostro con un procedimiento mínimamente invasivo.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── LOTE 2 ── -->
+        <div class="svc-slide">
+
+          <div class="svc-card">
+            <div class="svc-card-bg" style="background-image:url('https://gloriasantomauro.com/wp-content/uploads/2020/03/botox.jpg')"></div>
+            <div class="svc-card-veil"></div>
+            <div class="svc-card-body">
+              <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+              </div>
+              <h4 class="svc-card-title">BOTOX &amp; RELLENOS</h4>
+              <div class="svc-line"></div>
+              <p class="svc-card-text">Aplicación experta de toxina botulínica y ácido hialurónico para suavizar líneas de expresión y restaurar volumen de forma natural.</p>
+            </div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-card-bg" style="background-image:url('https://occlinic.com.br/wp-content/uploads/2022/12/abdominoplastia.jpg')"></div>
+            <div class="svc-card-veil"></div>
+            <div class="svc-card-body">
+              <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+              </div>
+              <h4 class="svc-card-title">ABDOMINOPLASTIA</h4>
+              <div class="svc-line"></div>
+              <p class="svc-card-text">Corrección del abdomen flácido o con exceso de piel para recuperar un contorno firme y estético con resultados duraderos.</p>
+            </div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-card-bg" style="background-image:url('https://www.roelmoyeda.com/wp-content/uploads/2021/12/Blefaroplastia.jpg')"></div>
+            <div class="svc-card-veil"></div>
+            <div class="svc-card-body">
+              <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h4 class="svc-card-title">BLEFAROPLASTIA</h4>
+              <div class="svc-line"></div>
+              <p class="svc-card-text">Rejuvenecimiento del área de los párpados para eliminar el exceso de piel y recuperar una mirada fresca y descansada.</p>
+            </div>
+          </div>
+
+          <div class="svc-card">
+            <div class="svc-card-bg" style="background-image:url('https://drayurielisramos.com/wp-content/uploads/2025/02/Consulta-medica-integral.png')"></div>
+            <div class="svc-card-veil"></div>
+            <div class="svc-card-body">
+              <div class="svc-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+              </div>
+              <h4 class="svc-card-title">CONSULTA INTEGRAL</h4>
+              <div class="svc-line"></div>
+              <p class="svc-card-text">Evaluación personalizada con el Dr. Castillo para diseñar tu plan estético a medida, con total seguridad y confidencialidad.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="svc-controls reveal-el">
+      <button class="svc-btn" id="svcPrev" aria-label="Anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <div class="svc-dots" id="svcDots">
+        <button class="svc-dot active" data-slide="0" aria-label="Lote 1"></button>
+        <button class="svc-dot" data-slide="1" aria-label="Lote 2"></button>
+      </div>
+      <button class="svc-btn" id="svcNext" aria-label="Siguiente">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+      <!-- ── HISTORIA ── -->
+      <section
+        id="historia"
+        class="section-pad bg-carbon-50 dark:bg-carbon-800 overflow-hidden"
+      >
+        <div class="max-w-6xl mx-auto px-4">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center"
+          >
+            <div class="reveal-el order-2 lg:order-1">
+              <p
+                class="text-gold-500 text-[0.65rem] tracking-[0.5em] uppercase font-semibold mb-3"
+              >
+                Nuestra historia
+              </p>
+              <h3
+                class="font-display text-5xl sm:text-6xl lg:text-7xl text-carbon-900 dark:text-white tracking-wider leading-tight mb-8"
+              >
+                12 AÑOS<br />RENOVANDO<br /><span class="text-gold-500"
+                  >CONFIANZA</span
+                >
+              </h3>
+              <div
+                class="space-y-4 text-carbon-600 dark:text-carbon-300 text-sm leading-relaxed"
+              >
+                <p>
+                  La clínica del Dr. Romeo Castillo Pérez nació en 2012 con una visión clara: brindar cirugía estética de alto nivel con calidez humana, seguridad clínica y resultados que respetan la esencia de cada paciente.
+                </p>
+                <p>
+                  Lo que comenzó como un consultorio privado, hoy es una clínica de referencia en Tabasco, con más de 1,200 pacientes satisfechos y un equipo de 8 especialistas certificados en cirugía plástica, anestesiología y medicina estética.
+                </p>
+                <p>
+                  Nuestra filosofía es simple:
+                  <span class="text-gold-500 font-semibold"
+                    >belleza auténtica, sin excesos</span
+                  >. Cada paciente llega con una historia y se va construyendo una nueva versión de sí mismo.
+                </p>
+              </div>
+              <div class="mt-10 space-y-5">
+                <div class="timeline-item reveal-el">
+                  <span class="timeline-year">2012</span
+                  ><span class="timeline-dot"></span>
+                  <p class="text-carbon-600 dark:text-carbon-300 text-sm">
+                    Apertura de la clínica en Cárdenas, Tabasco
+                  </p>
+                </div>
+                <div class="timeline-item reveal-el">
+                  <span class="timeline-year">2015</span
+                  ><span class="timeline-dot"></span>
+                  <p class="text-carbon-600 dark:text-carbon-300 text-sm">
+                    Certificación por el Consejo Mexicano de Cirugía Plástica
+                  </p>
+                </div>
+                <div class="timeline-item reveal-el">
+                  <span class="timeline-year">2019</span
+                  ><span class="timeline-dot"></span>
+                  <p class="text-carbon-600 dark:text-carbon-300 text-sm">
+                    Reconocimiento estatal al mejor especialista en cirugía estética
+                  </p>
+                </div>
+                <div class="timeline-item reveal-el">
+                  <span class="timeline-year">2024</span
+                  ><span class="timeline-dot"></span>
+                  <p class="text-carbon-600 dark:text-carbon-300 text-sm">
+                    12° aniversario — más de 1,200 pacientes transformados
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative reveal-el order-1 lg:order-2">
+              <div class="historia-frame">
+                <img
+                  src="images/romeodr.png"
+                  alt="Clínica Dr. Romeo Castillo Pérez"
+                  class="historia-img"
+                  loading="lazy"
+                />
+                <div class="historia-border"></div>
+                <div class="stat-badge">
+                  <p class="font-display text-4xl text-gold-500">12°</p>
+                  <p
+                    class="text-white text-[0.65rem] tracking-widest uppercase mt-0.5"
+                  >
+                    Aniversario
+                  </p>
+                  <div class="w-8 h-px bg-gold-500 my-2"></div>
+                  <p class="text-carbon-300 text-[0.65rem] leading-snug">
+                    Cárdenas<br />Tabasco, México
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── GALERÍA ── -->
+      <section
+        id="galeria"
+        class="section-pad bg-carbon-900 dark:bg-black overflow-hidden"
+      >
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center mb-14 reveal-el">
+            <p
+              class="text-gold-500 text-[0.65rem] tracking-[0.5em] uppercase font-semibold mb-3"
+            >
+              Nuestras instalaciones
+            </p>
+            <h3
+              class="font-display text-5xl sm:text-7xl text-white tracking-wider"
+            >
+              VIVE LA <span class="text-gold-500">EXPERIENCIA</span>
+            </h3>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item gallery-tall reveal-el">
+              <img
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80"
+                alt="Quirófano equipado"
+                loading="lazy"
+              />
+              <div class="gallery-overlay"><span>Quirófano</span></div>
+            </div>
+            <div class="gallery-item reveal-el">
+              <img
+                src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80"
+                alt="Área de consulta"
+                loading="lazy"
+              />
+              <div class="gallery-overlay"><span>Consultorios</span></div>
+            </div>
+            <div class="gallery-item reveal-el">
+              <img
+                src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80"
+                alt="Sala de recuperación"
+                loading="lazy"
+              />
+              <div class="gallery-overlay"><span>Recuperación</span></div>
+            </div>
+            <div class="gallery-item gallery-wide reveal-el">
+              <img
+                src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1200&q=80"
+                alt="Equipamiento médico"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <span>Tecnología de Punta</span>
+              </div>
+            </div>
+            <div class="gallery-item reveal-el">
+              <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+                alt="Área de medicina estética"
+                loading="lazy"
+              />
+              <div class="gallery-overlay"><span>Medicina Estética</span></div>
+            </div>
+            <div class="gallery-item reveal-el">
+              <img
+                src="https://images.unsplash.com/photo-1519494140681-8b17d830a3e9?w=800&q=80"
+                alt="Recepción clínica"
+                loading="lazy"
+              />
+              <div class="gallery-overlay"><span>Recepción</span></div>
+            </div>       
+          </div>
+        </div>
+      </section>
+
+      <!-- ── EQUIPO ── -->
+      <section
+        id="entrenadores"
+        class="section-pad bg-white dark:bg-carbon-900"
+      >
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center mb-16 reveal-el">
+            <p
+              class="text-gold-500 text-[0.65rem] tracking-[0.5em] uppercase font-semibold mb-3"
+            >
+              El equipo
+            </p>
+            <h3
+              class="font-display text-5xl sm:text-7xl text-carbon-900 dark:text-white tracking-wider"
+            >
+              TUS <span class="text-gold-500">ESPECIALISTAS</span>
+            </h3>
+            <p
+              class="text-carbon-500 dark:text-carbon-400 mt-4 text-sm max-w-md mx-auto"
+            >
+              Médicos certificados que han transformado miles de vidas. Tu seguridad y bienestar son nuestra misión.
+            </p>
+          </div>
+         <div class="flex flex-col items-center gap-6">
+  <!-- Fila superior: Dr. Romeo centrado -->
+  <div class="w-full max-w-xs">
+    <div class="trainer-card reveal-el">
+      <div class="trainer-img-wrap">
+        <img src="images/drromeo.png" alt="Dr. Romeo Castillo Pérez" loading="lazy" />
+        <div class="trainer-overlay">
+          <div class="trainer-social">
+            <a href="#" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-info">
+        <h4 class="font-display text-xl text-carbon-900 dark:text-white tracking-wider">DR. ROMEO CASTILLO</h4>
+        <p class="text-gold-500 text-xs tracking-widest uppercase mt-1">Cirugía Plástica y Estética</p>
+        <p class="text-carbon-500 dark:text-carbon-400 text-xs mt-2 leading-relaxed">CMCPER · 12 años de experiencia · Director médico</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fila inferior: los otros 3 -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+
+    <div class="trainer-card reveal-el">
+      <div class="trainer-img-wrap">
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80" alt="Dra. Valeria Mora" loading="lazy" />
+        <div class="trainer-overlay">
+          <div class="trainer-social">
+            <a href="#" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-info">
+        <h4 class="font-display text-xl text-carbon-900 dark:text-white tracking-wider">DRA. VALERIA MORA</h4>
+        <p class="text-gold-500 text-xs tracking-widest uppercase mt-1">Medicina Estética</p>
+        <p class="text-carbon-500 dark:text-carbon-400 text-xs mt-2 leading-relaxed">Especialista en Botox &amp; Rellenos · 6 años</p>
+      </div>
+    </div>
+
+    <div class="trainer-card reveal-el">
+      <div class="trainer-img-wrap">
+        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&q=80" alt="Dr. Andrés Peña" loading="lazy" />
+        <div class="trainer-overlay">
+          <div class="trainer-social">
+            <a href="#" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-info">
+        <h4 class="font-display text-xl text-carbon-900 dark:text-white tracking-wider">DR. ANDRÉS PEÑA</h4>
+        <p class="text-gold-500 text-xs tracking-widest uppercase mt-1">Anestesiología</p>
+        <p class="text-carbon-500 dark:text-carbon-400 text-xs mt-2 leading-relaxed">Anestesiólogo certificado · 10 años de experiencia</p>
+      </div>
+    </div>
+
+    <div class="trainer-card reveal-el">
+      <div class="trainer-img-wrap">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80" alt="Dra. Isabela Fuentes" loading="lazy" />
+        <div class="trainer-overlay">
+          <div class="trainer-social">
+            <a href="#" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="trainer-info">
+        <h4 class="font-display text-xl text-carbon-900 dark:text-white tracking-wider">DRA. ISABELA FUENTES</h4>
+        <p class="text-gold-500 text-xs tracking-widest uppercase mt-1">Enfermería Quirúrgica</p>
+        <p class="text-carbon-500 dark:text-carbon-400 text-xs mt-2 leading-relaxed">Especialista en cuidados postoperatorios · 7 años</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+        </div>
+      </section>
+
+        <!-- ── TESTIMONIOS ── -->
+        <section id="testimonios" class="section-pad bg-carbon-50 dark:bg-carbon-800">
+          <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-14 reveal-el">
+              <p class="text-gold-500 text-[0.65rem] tracking-[0.5em] uppercase font-semibold mb-3">
+                Opiniones reales
+              </p>
+              <h3 class="font-display text-5xl sm:text-6xl text-carbon-900 dark:text-white tracking-wider">
+                LO QUE DICEN <span class="text-gold-500">NUESTROS PACIENTES</span>
+              </h3>
+            </div>
+            <div class="grid gap-8 md:grid-cols-2">
+              <div class="bg-white dark:bg-carbon-900 rounded-2xl shadow-lg p-7 reveal-el flex flex-col h-full">
+                <div class="flex items-center gap-3 mb-3">
+                  <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Paciente 1" class="w-12 h-12 rounded-full border-2 border-gold-500" />
+                  <div>
+                    <p class="font-display text-lg text-gold-500 leading-tight">María G.</p>
+                    <p class="text-xs text-carbon-400 dark:text-carbon-300">Rinoplastia</p>
+                  </div>
+                </div>
+                <p class="text-carbon-700 dark:text-carbon-200 text-sm flex-1">
+                  "El Dr. Castillo y su equipo me dieron confianza desde el primer momento. El resultado superó mis expectativas, ahora me siento segura y feliz con mi imagen. ¡Gracias por tanto profesionalismo y calidez!"
+                </p>
+              </div>
+              <div class="bg-white dark:bg-carbon-900 rounded-2xl shadow-lg p-7 reveal-el flex flex-col h-full">
+                <div class="flex items-center gap-3 mb-3">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Paciente 2" class="w-12 h-12 rounded-full border-2 border-gold-500" />
+                  <div>
+                    <p class="font-display text-lg text-gold-500 leading-tight">Carlos R.</p>
+                    <p class="text-xs text-carbon-400 dark:text-carbon-300">Liposucción</p>
+                  </div>
+                </div>
+                <p class="text-carbon-700 dark:text-carbon-200 text-sm flex-1">
+                  "Me explicaron todo el proceso y resolvieron mis dudas. El cambio fue increíble y la recuperación muy rápida. Recomiendo ampliamente la clínica, son los mejores."
+                </p>
+              </div>
+              <div class="bg-white dark:bg-carbon-900 rounded-2xl shadow-lg p-7 reveal-el flex flex-col h-full">
+                <div class="flex items-center gap-3 mb-3">
+                  <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Paciente 3" class="w-12 h-12 rounded-full border-2 border-gold-500" />
+                  <div>
+                    <p class="font-display text-lg text-gold-500 leading-tight">Sandra L.</p>
+                    <p class="text-xs text-carbon-400 dark:text-carbon-300">Mamoplastia</p>
+                  </div>
+                </div>
+                <p class="text-carbon-700 dark:text-carbon-200 text-sm flex-1">
+                  "El trato humano y la atención personalizada hicieron toda la diferencia. Me sentí acompañada en cada etapa y el resultado fue justo lo que soñaba."
+                </p>
+              </div>
+              <div class="bg-white dark:bg-carbon-900 rounded-2xl shadow-lg p-7 reveal-el flex flex-col h-full">
+                <div class="flex items-center gap-3 mb-3">
+                  <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Paciente 4" class="w-12 h-12 rounded-full border-2 border-gold-500" />
+                  <div>
+                    <p class="font-display text-lg text-gold-500 leading-tight">Javier P.</p>
+                    <p class="text-xs text-carbon-400 dark:text-carbon-300">Blefaroplastia</p>
+                  </div>
+                </div>
+                <p class="text-carbon-700 dark:text-carbon-200 text-sm flex-1">
+                  "Excelente atención, instalaciones modernas y resultados naturales. Sin duda volvería a elegirlos."
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── TESTIMONIOS VIDEO ── -->
+      <section id="testimonios-video" class="section-pad bg-white dark:bg-carbon-900">
+        <div class="max-w-4xl mx-auto px-4">
+          <div class="text-center mb-14 reveal-el">
+            <p class="text-gold-500 text-[0.65rem] tracking-[0.5em] uppercase font-semibold mb-3">
+              Testimonios en video
+            </p>
+            <h3 class="font-display text-4xl sm:text-5xl text-carbon-900 dark:text-white tracking-wider">
+              CONOCE LAS <span class="text-gold-500">EXPERIENCIAS</span> DE NUESTROS PACIENTES
+            </h3>
+            <p class="text-carbon-500 dark:text-carbon-400 mt-4 text-sm max-w-md mx-auto">
+              Mira historias reales de transformación y confianza contadas por quienes ya vivieron el cambio.
+            </p>
+          </div>
+          <div class="grid gap-8 md:grid-cols-2">
+            <!-- Video 1 -->
+            <a href="https://youtu.be/XtQNEGcPxig?si=ygHO88UWEzUY0YYi" target="_blank" rel="noopener" class="block group rounded-2xl overflow-hidden shadow-lg bg-carbon-50 dark:bg-carbon-800 hover:scale-[1.03] transition-transform reveal-el">
+              <div class="relative aspect-video bg-black">
+                <img src="https://img.youtube.com/vi/XtQNEGcPxig/hqdefault.jpg" alt="Testimonio video 1" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300" />
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#D4AF37" fill-opacity="0.92"/><polygon points="23,18 41,28 23,38" fill="white"/></svg>
+                </div>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display text-lg text-gold-500 mb-1">Testimonio de Karla</h4>
+                <p class="text-carbon-700 dark:text-carbon-200 text-sm">"Mi experiencia fue increíble, el trato y el resultado cambiaron mi vida."</p>
+              </div>
+            </a>
+            <!-- Video 2 -->
+             <a href="https://youtu.be/XtQNEGcPxig?si=ygHO88UWEzUY0YYi" target="_blank" rel="noopener" class="block group rounded-2xl overflow-hidden shadow-lg bg-carbon-50 dark:bg-carbon-800 hover:scale-[1.03] transition-transform reveal-el">
+              <div class="relative aspect-video bg-black">
+                <img src="https://img.youtube.com/vi/XtQNEGcPxig/hqdefault.jpg" alt="Testimonio video 1" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300" />
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#D4AF37" fill-opacity="0.92"/><polygon points="23,18 41,28 23,38" fill="white"/></svg>
+                </div>
+              </div>
+              <div class="p-5">
+                <h4 class="font-display text-lg text-gold-500 mb-1">Testimonio de Karla</h4>
+                <p class="text-carbon-700 dark:text-carbon-200 text-sm">"Mi experiencia fue increíble, el trato y el resultado cambiaron mi vida."</p>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- ── HORARIOS ── -->
+      <section
+        id="horarios"
+        class="section-pad bg-carbon-50 dark:bg-carbon-800"
+      >
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center mb-14 reveal-el">
+            <p
+              class="text-gold-500 text-[0.65rem] tracking-[0.5em] uppercase font-semibold mb-3"
+            >
+              Semana en curso
+            </p>
+            <h3
+              class="font-display text-5xl sm:text-7xl text-carbon-900 dark:text-white tracking-wider"
+            >
+              HORARIO DE <span class="text-gold-500">CONSULTAS</span>
+            </h3>
+          </div>
+
+          <div class="schedule-tabs reveal-el" role="tablist">
+            <button class="schedule-tab active" data-day="lun" role="tab">LUN</button>
+            <button class="schedule-tab" data-day="mar" role="tab">MAR</button>
+            <button class="schedule-tab" data-day="mie" role="tab">MIÉ</button>
+            <button class="schedule-tab" data-day="jue" role="tab">JUE</button>
+            <button class="schedule-tab" data-day="vie" role="tab">VIE</button>
+            <button class="schedule-tab" data-day="sab" role="tab">SÁB</button>
+            <button class="schedule-tab" data-day="dom" role="tab">DOM</button>
+          </div>
+
+          <div id="schedule-panels">
+            <div class="schedule-panel active" data-panel="lun">
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">09:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot hiit"></span>
+                  <span class="sch-name">Consulta de Valoración</span>
+                  <span class="sch-trainer">Dr. Romeo Castillo</span>
+                </div>
+                <div class="sch-spots">4 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">11:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot yoga"></span>
+                  <span class="sch-name">Medicina Estética (Botox)</span>
+                  <span class="sch-trainer">Dra. Valeria Mora</span>
+                </div>
+                <div class="sch-spots">6 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">14:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot funcional"></span>
+                  <span class="sch-name">Seguimiento Postoperatorio</span>
+                  <span class="sch-trainer">Dra. Isabela Fuentes</span>
+                </div>
+                <div class="sch-spots">8 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">16:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot muscu"></span>
+                  <span class="sch-name">Procedimiento Quirúrgico</span>
+                  <span class="sch-trainer">Dr. Romeo Castillo</span>
+                </div>
+                <div class="sch-spots">Por agenda</div>
+              </div>
+            </div>
+
+            <div class="schedule-panel" data-panel="mar">
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">09:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot muscu"></span>
+                  <span class="sch-name">Procedimiento Quirúrgico</span>
+                  <span class="sch-trainer">Dr. Romeo Castillo</span>
+                </div>
+                <div class="sch-spots">Por agenda</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">12:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot yoga"></span>
+                  <span class="sch-name">Rellenos &amp; Perfilado</span>
+                  <span class="sch-trainer">Dra. Valeria Mora</span>
+                </div>
+                <div class="sch-spots">5 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">15:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot hiit"></span>
+                  <span class="sch-name">Consulta de Valoración</span>
+                  <span class="sch-trainer">Dr. Romeo Castillo</span>
+                </div>
+                <div class="sch-spots">4 citas</div>
+              </div>
+            </div>
+
+            <div class="schedule-panel" data-panel="mie">
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">08:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot funcional"></span>
+                  <span class="sch-name">Seguimiento Postoperatorio</span>
+                  <span class="sch-trainer">Dra. Isabela Fuentes</span>
+                </div>
+                <div class="sch-spots">8 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">10:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot yoga"></span>
+                  <span class="sch-name">Medicina Estética</span>
+                  <span class="sch-trainer">Dra. Valeria Mora</span>
+                </div>
+                <div class="sch-spots">6 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">14:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot hiit"></span>
+                  <span class="sch-name">Consulta de Valoración</span>
+                  <span class="sch-trainer">Dr. Romeo Castillo</span>
+                </div>
+                <div class="sch-spots">4 citas</div>
+              </div>
+            </div>
+
+            <div class="schedule-panel" data-panel="jue">
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">09:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot muscu"></span>
+                  <span class="sch-name">Procedimiento Quirúrgico</span>
+                  <span class="sch-trainer">Dr. Romeo Castillo</span>
+                </div>
+                <div class="sch-spots">Por agenda</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">13:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot yoga"></span>
+                  <span class="sch-name">Rellenos &amp; Botox</span>
+                  <span class="sch-trainer">Dra. Valeria Mora</span>
+                </div>
+                <div class="sch-spots">5 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">16:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot funcional"></span>
+                  <span class="sch-name">Seguimiento Postoperatorio</span>
+                  <span class="sch-trainer">Dra. Isabela Fuentes</span>
+                </div>
+                <div class="sch-spots">8 citas</div>
+              </div>
+            </div>
+
+            <div class="schedule-panel" data-panel="vie">
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">09:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot hiit"></span>
+                  <span class="sch-name">Consulta de Valoración</span>
+                  <span class="sch-trainer">Dr. Romeo Castillo</span>
+                </div>
+                <div class="sch-spots">4 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">11:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot yoga"></span>
+                  <span class="sch-name">Medicina Estética</span>
+                  <span class="sch-trainer">Dra. Valeria Mora</span>
+                </div>
+                <div class="sch-spots">6 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">14:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot muscu"></span>
+                  <span class="sch-name">Procedimiento Quirúrgico</span>
+                  <span class="sch-trainer">Dr. Romeo Castillo</span>
+                </div>
+                <div class="sch-spots">Por agenda</div>
+              </div>
+            </div>
+
+            <div class="schedule-panel" data-panel="sab">
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">09:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot hiit"></span>
+                  <span class="sch-name">Consulta de Valoración</span>
+                  <span class="sch-trainer">Dr. Romeo Castillo</span>
+                </div>
+                <div class="sch-spots">4 citas</div>
+              </div>
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">11:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot yoga"></span>
+                  <span class="sch-name">Medicina Estética</span>
+                  <span class="sch-trainer">Dra. Valeria Mora</span>
+                </div>
+                <div class="sch-spots">5 citas</div>
+              </div>
+            </div>
+
+            <div class="schedule-panel" data-panel="dom">
+              <div class="schedule-row reveal-el">
+                <div class="sch-time">10:00</div>
+                <div class="sch-class">
+                  <span class="sch-dot funcional"></span>
+                  <span class="sch-name">Seguimiento Postoperatorio</span>
+                  <span class="sch-trainer">Dra. Isabela Fuentes</span>
+                </div>
+                <div class="sch-spots">4 citas</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-5 mt-10 justify-center reveal-el">
+            <span class="flex items-center gap-2 text-xs text-carbon-500 dark:text-carbon-400"><span class="w-3 h-3 rounded-full bg-gold-500 inline-block"></span>Valoración</span>
+            <span class="flex items-center gap-2 text-xs text-carbon-500 dark:text-carbon-400"><span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>Medicina Estética</span>
+            <span class="flex items-center gap-2 text-xs text-carbon-500 dark:text-carbon-400"><span class="w-3 h-3 rounded-full bg-sky-400 inline-block"></span>Postoperatorio</span>
+            <span class="flex items-center gap-2 text-xs text-carbon-500 dark:text-carbon-400"><span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>Procedimiento Quirúrgico</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PLANES ── -->
+      <section id="planes" class="section-pad bg-white dark:bg-carbon-900">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center mb-16 reveal-el">
+            <p
+              class="text-gold-500 text-[0.65rem] tracking-[0.5em] uppercase font-semibold mb-3"
+            >
+              Paquetes
+            </p>
+            <h3
+              class="font-display text-5xl sm:text-7xl text-carbon-900 dark:text-white tracking-wider"
+            >
+              ELIGE TU <span class="text-gold-500">PAQUETE</span>
+            </h3>
+            <p
+              class="text-carbon-500 dark:text-carbon-400 mt-4 text-sm max-w-sm mx-auto"
+            >
+              Presupuestos transparentes. Sin sorpresas. Solo resultados que te transforman.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-center"
+          >
+            <div class="pricing-card reveal-el">
+              <p class="plan-tier">ESENCIAL</p>
+              <div class="plan-price">
+                <span class="plan-currency">$</span>1,500<span class="plan-period">/consulta</span>
+              </div>
+              <p class="plan-tagline">Tu primer paso hacia el cambio</p>
+              <ul class="plan-features">
+                <li><span class="chk yes">✓</span> Consulta de valoración</li>
+                <li><span class="chk yes">✓</span> Evaluación facial y corporal</li>
+                <li><span class="chk yes">✓</span> Plan de procedimientos personalizado</li>
+                <li><span class="chk yes">✓</span> Fotografías de diagnóstico</li>
+                <li class="off"><span class="chk no">✗</span> Procedimiento incluido</li>
+                <li class="off"><span class="chk no">✗</span> Seguimiento postoperatorio</li>
+                <li class="off"><span class="chk no">✗</span> Medicina estética incluida</li>
+              </ul>
+              <a href="#contacto" class="btn-outline w-full text-center mt-8 py-3">Agendar</a>
+            </div>
+            <div class="pricing-card pricing-featured reveal-el">
+              <div class="featured-tag">MÁS POPULAR</div>
+              <p class="plan-tier featured">TRANSFORMACIÓN</p>
+              <div class="plan-price featured">
+                <span class="plan-currency">$</span>18,000<span class="plan-period">/procedimiento</span>
+              </div>
+              <p class="plan-tagline featured">El paquete completo</p>
+              <ul class="plan-features featured">
+                <li><span class="chk yes">✓</span> Consulta de valoración</li>
+                <li><span class="chk yes">✓</span> Un procedimiento estético</li>
+                <li><span class="chk yes">✓</span> Anestesiología incluida</li>
+                <li><span class="chk yes">✓</span> Seguimiento postoperatorio 30 días</li>
+                <li><span class="chk yes">✓</span> Kit de recuperación</li>
+                <li class="off"><span class="chk no">✗</span> Medicina estética complementaria</li>
+                <li class="off"><span class="chk no">✗</span> Segundo procedimiento</li>
+              </ul>
+              <a href="#contacto" class="btn-gold w-full text-center mt-8 py-3 block">Agendar</a>
+            </div>
+            <div class="pricing-card reveal-el">
+              <p class="plan-tier">VIP</p>
+              <div class="plan-price">
+                <span class="plan-currency">$</span>35,000<span class="plan-period">/paquete</span>
+              </div>
+              <p class="plan-tagline">La experiencia definitiva</p>
+              <ul class="plan-features">
+                <li><span class="chk yes">✓</span> Todo lo del paquete Transformación</li>
+                <li><span class="chk yes">✓</span> Dos procedimientos a elección</li>
+                <li><span class="chk yes">✓</span> Medicina estética complementaria</li>
+                <li><span class="chk yes">✓</span> Seguimiento postoperatorio 60 días</li>
+                <li><span class="chk yes">✓</span> Sesiones de Botox incluidas</li>
+                <li><span class="chk yes">✓</span> Atención prioritaria 24/7</li>
+                <li><span class="chk yes">✓</span> Plan nutricional de recuperación</li>
+              </ul>
+              <a href="#contacto" class="btn-outline w-full text-center mt-8 py-3">Agendar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FAQ ── -->
+      <section id="faq" class="section-pad bg-carbon-900 dark:bg-black">
+        <div class="max-w-3xl mx-auto px-4">
+          <div class="text-center mb-14 reveal-el">
+            <p
+              class="text-gold-500 text-[0.65rem] tracking-[0.5em] uppercase font-semibold mb-3"
+            >
+              Dudas frecuentes
+            </p>
+            <h3
+              class="font-display text-5xl sm:text-7xl text-white tracking-wider"
+            >
+              PREGUNTAS <span class="text-gold-500">FRECUENTES</span>
+            </h3>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item reveal-el">
+              <button class="faq-q" aria-expanded="false">
+                <span>¿Necesito una consulta previa antes del procedimiento?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <p>
+                  Sí, siempre. La consulta de valoración es obligatoria y gratuita para pacientes que agenden su procedimiento con nosotros. En ella el Dr. Castillo evalúa tu caso, explica opciones, resuelve dudas y diseña un plan personalizado para ti.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal-el">
+              <button class="faq-q" aria-expanded="false">
+                <span>¿Cuánto tiempo dura la recuperación?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <p>
+                  Depende del procedimiento. Los tratamientos de medicina estética (Botox, rellenos) no requieren reposo. Las cirugías menores tienen recuperación de 3–7 días, y los procedimientos mayores como rinoplastia o liposucción requieren entre 10 y 21 días de reposo relativo.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal-el">
+              <button class="faq-q" aria-expanded="false">
+                <span>¿Los procedimientos incluyen anestesia?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <p>
+                  Sí. Todos los procedimientos quirúrgicos incluyen la anestesiología a cargo del Dr. Andrés Peña, especialista certificado. El tipo de anestesia (local, sedación o general) se define según el procedimiento y el perfil del paciente.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal-el">
+              <button class="faq-q" aria-expanded="false">
+                <span>¿Los resultados son permanentes?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <p>
+                  Los procedimientos quirúrgicos como rinoplastia, liposucción o mamoplastia ofrecen resultados permanentes. Los tratamientos de medicina estética como Botox duran entre 4 y 8 meses, y los rellenos entre 12 y 18 meses dependiendo del producto.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal-el">
+              <button class="faq-q" aria-expanded="false">
+                <span>¿Ofrecen financiamiento o pagos a meses?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <p>
+                  Sí. Contamos con planes de financiamiento flexibles y aceptamos tarjetas de crédito con mensualidades sin intereses en plazos seleccionados. Pregunta a nuestro equipo por las opciones disponibles al momento de tu consulta.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item reveal-el">
+              <button class="faq-q" aria-expanded="false">
+                <span>¿Cuál es la edad mínima para un procedimiento estético?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-a">
+                <p>
+                  Para procedimientos quirúrgicos la edad mínima es 18 años. Menores de edad pueden acceder a procedimientos específicos con autorización notariada de sus tutores y previa evaluación médica completa por el Dr. Castillo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FOOTER / CONTACTO ── -->
+      <footer
+        id="contacto"
+        class="bg-carbon-900 dark:bg-black border-t border-carbon-700/50"
+      >
+        <div class="max-w-6xl mx-auto px-4">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 py-16 justify-items-center text-center"
+            style="width:100%"
+          >
+            <div class="reveal-el sm:col-span-2 lg:col-span-1 flex flex-col items-center text-center">
+              <div class="flex items-center gap-3 mb-5 justify-center">
+                <div
+                  class="w-11 h-11 rounded-full border-2 border-gold-500 flex items-center justify-center flex-shrink-0"
+                >
+                  <img
+                    class="w-8 h-8 object-contain"
+                    src="images/nabvard.png"
+                    alt="Logo Dr. Romeo Castillo"
+                  />
+                </div>
+                <span class="font-display text-white text-xl tracking-[0.18em]">DR. ROMEO CASTILLO</span>
+              </div>
+              <p class="text-carbon-400 text-sm leading-relaxed mb-6 max-w-xs text-center mx-auto">
+                Cirugía estética de élite en Cárdenas, Tabasco. Donde la confianza se renueva y tu nueva versión comienza.
+              </p>
+              <div class="flex gap-3 justify-center">
+                <a href="#" class="social-icon" aria-label="Instagram"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="#" class="social-icon" aria-label="Facebook"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                <a href="#" class="social-icon" aria-label="TikTok"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+                <a href="#" class="social-icon" aria-label="YouTube"
+                  ><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+              </div>
+            </div>
+            <div class="reveal-el flex flex-col items-center text-center">
+              <h5 class="font-display text-white text-xl tracking-[0.25em] mb-6">CONTACTO</h5>
+              <div class="space-y-5 w-full">
+                <div class="footer-contact-row justify-center text-center w-full">
+                  <svg class="w-4 h-4 text-gold-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                  <div>
+                    <p class="text-white text-xs font-semibold tracking-wide">Dirección</p>
+                    <p class="text-carbon-400 text-xs mt-0.5 leading-snug">
+                      Prolongación Felipe Carrillo Puerto 4,<br />Pueblo Nuevo, 86560 Cárdenas, Tab.
+                    </p>
+                  </div>
+                </div>
+                <div class="footer-contact-row justify-center text-center w-full">
+                  <svg class="w-4 h-4 text-gold-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                  <div>
+                    <p class="text-white text-xs font-semibold tracking-wide">Email</p>
+                    <p class="text-carbon-400 text-xs mt-0.5">contacto@drromeocastillo.mx</p>
+                  </div>
+                </div>
+                <div class="footer-contact-row justify-center text-center w-full">
+                  <svg class="w-4 h-4 text-gold-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  </svg>
+                  <div>
+                    <p class="text-white text-xs font-semibold tracking-wide">Teléfono</p>
+                    <p class="text-carbon-400 text-xs mt-0.5">+52 937 123 4567</p>
+                  </div>
+                </div>
+                <div class="footer-contact-row justify-center text-center w-full">
+                  <svg class="w-4 h-4 text-gold-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <div>
+                    <p class="text-white text-xs font-semibold tracking-wide">Horarios</p>
+                    <p class="text-carbon-400 text-xs mt-0.5 leading-snug">
+                      Lun – Vie: 9:00 am – 7:00 pm<br />Sáb: 9:00 am – 2:00 pm
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reveal-el flex flex-col items-center text-center">
+              <h5 class="font-display text-white text-xl tracking-[0.25em] mb-6">UBICACIÓN</h5>
+              <div class="w-full flex flex-col items-center justify-center">
+                <div class="text-carbon-400 text-sm leading-relaxed mb-4 max-w-xs text-center mx-auto">
+                  Frente a SEDESOL, Cerrada Bayona # 111 Col, Primero de Mayo, 86190 Villahermosa, Tab.
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.7303300019207!2d-92.93254332477626!3d17.96956808302041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edd94abb694d7d%3A0x502049306aab8dec!2sDr.%20Romeo%20Castillo%20P%C3%A9rez!5e1!3m2!1ses-419!2smx!4v1778704332817!5m2!1ses-419!2smx" width="350" height="200" style="border:0; border-radius:12px; max-width:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-carbon-700/50 py-6 flex flex-col items-center gap-2 text-center">
+            <p class="text-carbon-500 text-xs">
+              © 2026 Cirugía Estética Dr. Romeo Castillo Pérez. Todos los derechos reservados.
+            </p>
+            <p class="text-carbon-600 text-xs">Hecho con ❤️ en Villahermosa, Tabasco</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
